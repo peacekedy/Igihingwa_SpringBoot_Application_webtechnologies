@@ -122,42 +122,55 @@ Navigation:
 
    
 About Us: Access information about the Igihingwafarm , our mission, and values by clicking on the  "About Us" link   
+ ![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/4d74445f-6e29-44c2-811a-95c9d1bcf007)
+
     
-Explore the Organic seeds by knowing each and every  option. View the services provided  via presented :   
+Explore the Organic seeds by knowing each and every  option. View the services provided  via presented : 
+![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/f6957c6e-04aa-4887-b57a-fdf263e019fc)
+
     
    
    
 Products: Browse through our diverse collection of artworks and products by clicking on the  
 "Products" section   
+![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/38dc391a-614e-45c2-a1a0-b564b1710ea9)
     
    
    
    
 Contact Us: Connect with us by clicking on the "Contact Us" link. Fill out the contact form to send us your inquiries, feedback, or suggestions   
+
+![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/82ff57c3-c8c5-48aa-877b-ea51561fdf79)
+
      
 User Registration and Login   
 Sign Up: To create an account, click on the "Sign Up" button. Fill out the required information, such as your name, email address, and password. Submit the form to register your account. You will choose your role so that you can learn how an admin differ from a simple user   
     
+![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/b19adbc4-e4ef-4b57-b5cd-d4d25628990d)
    
    
    
 Sign In: If you already have an account, click on the "Sign In" button. Enter your credentials (email and password) to log in to your account.   
-     
+    ![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/10bc1833-da7b-4af3-8b0c-ed656bd1fc78)
+  
 USER Account    
 Once signed in, you can access your account dashboard, where you can manage your profile and interact with the website.  
     
-   
+   ![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/6bfba23c-79fd-4aac-b259-92f8ebe0f649)
+
    
    
 OTHER LINKS ARE NORMAL BUT THE RGISTER TO IGIHINGWAFARM  GETS YOU AN A  REGISTRATION FORM   
   
     
 Administrator Account:   
-   
+   ![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/751903d6-e224-487d-9579-46799e6d0e82)
+
 Dashboard: Administrators have access to a dedicated dashboard with additional functionalities.   
 Search, Delete, and Download: Admins can perform advanced searches across artists, artworks, and products. They have the ability to delete and download artworks and product data   
    
-    
+   ![image](https://github.com/peacekedy/Igihingwa_SpringBoot_Application_webtechnologies/assets/53088757/c0a599d3-804b-4764-88a8-fa18f5e1a49c)
+ 
      
 Technical Documentation: Igihingwafarm    
 This technical documentation provides an overview of the Igihingwafarm  website, its architecture, technologies used, and instructions for developers to understand and contribute to the project.   
