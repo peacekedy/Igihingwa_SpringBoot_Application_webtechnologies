@@ -1,0 +1,80 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>User Dashboard</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Welcome to User Dashboard</h2>-->
+<!--<p>Logged as: <span sec:authentication="name"></span></p>-->
+<!--<p>Has role: <span sec:authentication="authorities"></span></p>-->
+<!--<div>-->
+<!--    <p><a th:href="@{/}">Home</a></p>-->
+<!--    <p><a th:href="@{/logout}">Log out</a></p>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title> User Dashboard</title>
+    <link href="/css/reg1style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/stylee1.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://assets.craftcdn.com/assets/v1/icons.css">
+    </head>
+<body >
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-c-plus-plus'></i>
+        <span class="logo_name">INGEMWE FARM</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a th:href="@{/dashboard}">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/registration}">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">Register</span>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/}">
+                <i class='bx bx-coin-stack' ></i>
+                <span class="links_name">Home</span>
+            </a>
+        </li>
+
+        <li class="log_out">
+            <a th:href="@{/logout}">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Log out</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<center>
+
+    <h2>Welcome to User Dashboard</h2><br>
+    <p>Logged as: <span sec:authentication="name"></span></p><br>
+    <p>Has role: <span sec:authentication="authorities"></span></p><br>
+</center>
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+        sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+            sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+            sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title> User Dashboard</title>
+    <link href="/css/reg1style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/stylee1.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://assets.craftcdn.com/assets/v1/icons.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 0 auto;
+            background-color: #c4c3ca;
+
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        thead th {
+            font-size: 15px;
+            padding: 3px; /* Decrease the padding to reduce cell width */
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+            font-size: 13px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .pagination ul li {
+            margin: 0 5px;
+        }
+        .pagination ul li a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination ul li a:hover {
+            background-color: #ccc;
+        }
+        .pagination ul li.active a {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .pagination ul li.disabled a {
+            pointer-events: none;
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+
+    </style>
+</head>
+<body >
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-c-plus-plus'></i>
+        <span class="logo_name">IGIHINGWA FARM</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a th:href="@{/admin/dashboard}">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/}">
+                <i class='bx bx-coin-stack' ></i>
+                <span class="links_name">Home</span>
+            </a>
+        </li>
+
+        <li class="log_out">
+            <a th:href="@{/logout}">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Log out</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<section class="home-section">
+    <nav>
+        <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">Dashboard</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search' ></i>
+        </div>
+    </nav>
+    <div class="home-content">
+        <div class="overview-boxes">
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Seedlings</div>
+                    <div class="number">3,876</div>
+                    <div class="indicator">
+
+                        <!-- <span class="text">Up from yesterday</span> -->
+                    </div>
+                </div>
+                <!-- <i class="fas fa-paint-brush"></i> -->
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total seeds</div>
+                    <div class="number">7,459</div>
+                    <div class="indicator">
+
+                        <!-- <span class="text">Up from yesterday</span> -->
+                    </div>
+                </div>
+                <i class="fa fa-book"></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Delivered</div>
+                    <div class="number">12,638</div>
+                    <div class="indicator">
+
+                        <!-- <span class="text">Up from yesterday</span> -->
+                    </div>
+                </div>
+                <!-- <i class="fas fa-cloud-showers-heavy"></i> -->
+
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Harvesting</div>
+                    <div class="number">11,064</div>
+                    <div class="indicator">
+
+                        <!-- <span class="text">Down From Today</span> -->
+                    </div>
+                </div>
+                <!-- <i class="fas fa-harvest"></i> -->
+            </div>
+        </div>
+    </div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Names</th>
+        <th>NIDA</th>
+        <th>phone</th>
+        <th>land</th>
+        <th>size</th>
+        <th>crop</th>
+        <th>fertilizer</th>
+    </tr>
+    </thead>
+    <tbody th:with="count=0">
+    <!-- Iterate over a list of users and display their details -->
+    <tr th:each = " model: ${allImbutos}">
+        <td th:text="${model.id}"></td>
+        <td th:text="${model.names}"></td>
+        <td th:text="${model.fileName}"></td>
+        <td th:text="${model.phone}"></td>
+        <td th:text="${model.land}"></td>
+        <td th:text="${model.size}"></td>
+        <td th:text="${model.crop}"></td>
+        <td th:text="${model.fertilizers}"></td>
+        <!--        <td> <a th:href="@{/registration)}">Update</a>-->
+        <td>
+            <a th:href="@{/admin/dashboard/delete/{id}(id=${model.id})}">Delete</a><br>
+            <a th:href="@{/imbuto/download/{id}(id=${model.id})}">Download NIDA</a>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+    <div class="pagination">
+        <ul>
+            <li th:class="${currentPage == 0 ? 'disabled' : ''}">
+                <a th:href="@{/admin/dashboard(page=0)}">First</a>
+            </li>
+            <li th:class="${currentPage == 0 ? 'disabled' : ''}">
+                <a th:href="@{/admin/dashboard(page=__${currentPage - 1}__)}">Previous</a>
+            </li>
+            <li th:each="pageNumber : ${#numbers.sequence(0, totalPages - 1)}"
+                th:class="${pageNumber == currentPage ? 'active' : ''}">
+                <a th:href="@{/admin/dashboard(page=${pageNumber})}" th:text="${pageNumber + 1}"></a>
+            </li>
+            <li th:class="${currentPage == totalPages - 1 ? 'disabled' : ''}">
+                <a th:href="@{/admin/dashboard(page=__${currentPage + 1}__)}">Next</a>
+            </li>
+            <li th:class="${currentPage == totalPages - 1 ? 'disabled' : ''}">
+                <a th:href="@{/admin/dashboard(page=${totalPages - 1})}">Last</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+        sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+            sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+            sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+</script>
+
+
+</body>
+</html>
